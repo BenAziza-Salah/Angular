@@ -1,0 +1,8 @@
+---
+# tasks file for docker-registry
+ 
+   - name : add tag to image 
+     command : docker tag devops:latest benazizasalah/devops:latest
+   - name : push image to dockerhub 
+     command : docker push benazizasalah/devops:latest
+

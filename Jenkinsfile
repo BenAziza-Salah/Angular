@@ -32,7 +32,7 @@ pipeline {
          stage('---- Docker Registry ---- ') {
             steps {
                 script{
-                    sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml"
+                    sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml -e ansible_become_password=root"
                 }
               }
            }
